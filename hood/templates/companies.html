@@ -3,7 +3,7 @@
     <div class="container">
         <div class="col m12">
             <button class="btn right hoverable modal-trigger" type="button" name="button" style="margin: 20px;" href="#modal1"><i class="material-icons left">add_circle_outline</i> Add</button>
-            {% if businesses %}
+            {% if companies %}
             <table>
             <thead>
               <tr>
@@ -15,25 +15,25 @@
             </thead>
 
             <tbody>
-                {% for business in businesses %}
+                {% for company in companies %}
                     <tr>
-                      <td>{{business.name}}</td>
-                      <td>{{business.description}}</td>
-                      <td>{{business.user}}</td>
-                      <td>{{business.email}}</td>
+                      <td>{{company.name}}</td>
+                      <td>{{company.description}}</td>
+                      <td>{{company.user}}</td>
+                      <td>{{company.email}}</td>
                     </tr>
                 {% endfor %}
             </tbody>
           </table>
           {% else %}
-          <h1 class="center-align">There are no businesses registered in your Neighborhood</h1>
+          <h1 class="center-align">There are no companies registered in your Neighborhood</h1>
           {% endif %}
         </div>
           <!-- Modal Structure -->
           <div id="modal1" class="modal" style="max-height: 800px !important;">
-            <form action="{%url 'businesses' %}" method='post' enctype="multipart/form-data">
+            <form action="{%url 'companies' %}" method='post' enctype="multipart/form-data">
             <div class="modal-content">
-              <h4>Add a Business</h4>
+              <h4>Add a Company</h4>
 
                   {% csrf_token %}
                   {{ form }}

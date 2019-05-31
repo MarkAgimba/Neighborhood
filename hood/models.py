@@ -41,29 +41,29 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
-class Business(models.Model):
+class Company(models.Model):
     name = models.CharField(max_length = 60)
-    user = models.ForeignKey(User,on_delete = models.CASCADE,related_name = 'business_user')
+    user = models.ForeignKey(User,on_delete = models.CASCADE,related_name = 'company_user')
     description = models.CharField(max_length = 150,null=True)
-    neighborhood = models.ForeignKey(Neighborhood,on_delete = models.CASCADE,related_name = 'business_neighbourhood')
+    neighborhood = models.ForeignKey(Neighborhood,on_delete = models.CASCADE,related_name = 'company_neighbourhood')
     category = models.ForeignKey('Category',on_delete = models.CASCADE,null=True)
     email = models.EmailField(max_length = 60)
 
     def __str__(self):
         return self.name
 
-    def create_business(self):
+    def create_company(self):
         self.save()
 
-    def delete_business(self):
+    def delete_company(self):
         self.delete()
 
     @classmethod
-    def find_business(cls,business_id):
-        business = Business.objects.get(id = business_id)
-        return business
+    def find_company(cls,company_id):
+        company = Company.objects.get(id = company_id)
+        return company
 
-    def update_business(self):
+    def update_company(self):
         self.save()
 
 class Post(models.Model):

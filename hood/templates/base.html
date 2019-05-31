@@ -17,7 +17,7 @@
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock%}
     </head>
-    <body>
+    <body style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
         {% include 'navbar.html' %}
         {% block content %}
         {% endblock %}
@@ -30,7 +30,7 @@
                     $('.sidenav').sidenav();
                     var posts = []
                     $.ajax({
-                        url: 'http://'+ window.location.host +'/api/businesses',
+                        url: 'http://'+ window.location.host +'/api/companies',
                         success: function (data) {
                             $.each(data, function(index,value) {
                                 posts.push(value['name'])

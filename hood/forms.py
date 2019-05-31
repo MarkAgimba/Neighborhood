@@ -1,14 +1,14 @@
 from django import forms
-from .models import UserProfile,Neighborhood,Business,Post,Comment
+from .models import UserProfile,Neighborhood,Company,Post,Comment
 
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('first_name','last_name','bio','neighborhood','email')
 
-class BusinessForm(forms.ModelForm):
+class CompanyForm(forms.ModelForm):
     class Meta:
-        model = Business
+        model = Company
         exclude = ['user','neighborhood']
 
 class PostForm(forms.ModelForm):
