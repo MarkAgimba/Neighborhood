@@ -18,3 +18,9 @@ Only view details of a single neighborhood.
 
 # Live Site
 
+
+# Prequisites
+* Python
+* Pip
+* Django
+* Postgres
