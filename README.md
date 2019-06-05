@@ -24,3 +24,11 @@ Only view details of a single neighborhood.
 * Pip
 * Django
 * Postgres
+
+## Setup/Installation Requirements
+* Git clone https://github.com/MarkAgimba/Neighborhood
+* Enter the Project root folder cd gallery/ install virtual environment (venv) without pip python3.6 -m venv --without-pip env 
+* Activate virtual environment source virtual/bin/activate install pip using curl
+```curl https://bootstrap.pypa.io/get-pip.py | python```
+
+* Run the server ```python3.6 manage.py runserver```
