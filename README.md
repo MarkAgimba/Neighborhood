@@ -32,3 +32,14 @@ Only view details of a single neighborhood.
 ```curl https://bootstrap.pypa.io/get-pip.py | python```
 
 * Run the server ```python3.6 manage.py runserver```
+
+## Known Bugs
+There are no unresolved issues in regards to this code that I know of.
+
+## Technologies used
+* Python3.7
+* Django
+* PostgreSQL
+* HTML5
+* CSS
+* Bootstrap
