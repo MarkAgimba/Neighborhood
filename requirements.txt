@@ -12,7 +12,7 @@ django-materialize-form==0.1.1
 django-registration==3.0
 django-tinymce==2.7.0
 django-widget-tweaks==1.4.3
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 dominate==2.3.4
 gunicorn==19.9.0
 incremental==17.5.0
